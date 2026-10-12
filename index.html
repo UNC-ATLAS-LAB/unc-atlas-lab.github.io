@@ -43,7 +43,7 @@
 				--carolina: #4B9CD3;
 			}
 
-			section#one {
+			#main > section {
 				margin-bottom: 3rem;
 			}
 
@@ -494,17 +494,13 @@
 				text-align: center;
 			}
 
-			.recruit-callout h2 {
+			.recruit-callout .recruit-text {
 				font-size: 1.1em;
 				font-weight: 700;
 				color: #1d4ed8;
 				margin: 0;
 				letter-spacing: -0.01em;
 				line-height: 1.4;
-			}
-
-			.recruit-callout h2:after {
-				display: none;
 			}
 
 			.join-list {
@@ -558,6 +554,19 @@
 					align-items: flex-start;
 				}
 			}
+			/* Accessibility: visible keyboard focus, dark sidebar beyond the photo */
+			a:focus-visible, button:focus-visible {
+				outline: 3px solid #1d4ed8;
+				outline-offset: 2px;
+			}
+
+			#header a:focus-visible {
+				outline-color: #ffffff;
+			}
+
+			#header {
+				background-color: #1e293b;
+			}
 		</style>
 	</head>
 	<body>
@@ -575,19 +584,19 @@
 					Chapel Hill, NC 27599<br />
 					fmli[at]unc[dot]edu</p>
 					<p>
-					<a href="https://scholar.google.com/citations?user=jZa4SPIAAAAJ&hl=en" class="icon-link" title="Google Scholar" target="_blank" rel="noopener"><i class="fa fa-google" aria-hidden="true"></i><span class="sr-only">Google Scholar</span></a> &nbsp;
-					<a href="https://www.linkedin.com/in/franklin-mingzhe-li-4b3b8986/?skipRedirect=true" class="icon-link" title="LinkedIn" target="_blank" rel="noopener"><i class="fa fa-linkedin" aria-hidden="true"></i><span class="sr-only">LinkedIn</span></a> &nbsp;
-					<a href="https://x.com/Franklin_M_Li" class="icon-link" title="Twitter" target="_blank" rel="noopener"><i class="fa fa-twitter" aria-hidden="true"></i><span class="sr-only">Twitter</span></a>
+					<a href="https://scholar.google.com/citations?user=jZa4SPIAAAAJ&hl=en" class="icon-link" title="Google Scholar" aria-label="Google Scholar" target="_blank" rel="noopener"><i class="fa fa-google" aria-hidden="true"></i><span class="sr-only">Google Scholar</span></a> &nbsp;
+					<a href="https://www.linkedin.com/in/franklin-mingzhe-li-4b3b8986/?skipRedirect=true" class="icon-link" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa fa-linkedin" aria-hidden="true"></i><span class="sr-only">LinkedIn</span></a> &nbsp;
+					<a href="https://x.com/Franklin_M_Li" class="icon-link" title="Twitter" aria-label="Twitter" target="_blank" rel="noopener"><i class="fa fa-twitter" aria-hidden="true"></i><span class="sr-only">Twitter</span></a>
 					</p>
 					<p class="lab-nav"><a href="https://franklin-li.com/">&larr; PI Homepage</a></p>
 				</div>
 			</header>
 
 		<!-- Main -->
-			<div id="main">
+			<div id="main" role="main">
 
 				<!-- About -->
-					<section id="one">
+					<section id="about-the-lab">
 						<header class="major">
 							<h2>About the Lab</h2>
 						</header>
@@ -621,7 +630,7 @@
 					</section>
 
 				<!-- Lab News -->
-					<section id="one">
+					<section id="lab-news">
 						<header class="major">
 							<h2>Lab News</h2>
 						</header>
@@ -635,7 +644,7 @@
 					</section>
 
 				<!-- Research Themes -->
-					<section id="one">
+					<section id="research-themes">
 						<header class="major">
 							<h2>Research Themes</h2>
 						</header>
@@ -688,7 +697,7 @@
 					</section>
 
 				<!-- People -->
-					<section id="one">
+					<section id="people">
 						<header class="major">
 							<h2>People</h2>
 						</header>
@@ -791,7 +800,7 @@
 					</section>
 
 				<!-- Selected Publications -->
-					<section id="one">
+					<section id="selected-publications">
 						<header class="major">
 							<h2>Selected Publications</h2>
 						</header>
@@ -804,7 +813,7 @@
 									<div class="pub-venue">CHI 2026</div>
 									<div class="pub-title">ADCanvas: Accessible and Conversational Audio Description Authoring for Blind and Low Vision Creators</div>
 									<div class="pub-authors"><strong>Franklin Mingzhe Li</strong>, Michael Xieyang Liu, Cynthia L Bennett, Shaun K Kane</div>
-									<div class="pub-links"><a href="https://franklin-li.com/3772318.3791158.pdf" class="pub-link"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> PDF</a></div>
+									<div class="pub-links"><a href="https://franklin-li.com/3772318.3791158.pdf" class="pub-link" aria-label="PDF: ADCanvas: Accessible and Conversational Audio Description Authoring for Blind and Low Vision Creators"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> PDF</a></div>
 								</div>
 							</div>
 
@@ -841,7 +850,7 @@
 									<div class="pub-venue">ASSETS 2025</div>
 									<div class="pub-title">VizXpress: Towards Expressive Visual Content by Blind Creators Through AI Support</div>
 									<div class="pub-authors">Lotus Zhang, Zhuohao Jerry Zhang, Gina Clepper, <strong>Franklin Mingzhe Li</strong>, Patrick Carrington, Jacob O Wobbrock, Leah Findlater</div>
-									<div class="pub-links"><a href="https://franklin-li.com/Camera_Ready_ASSETS25__VizXpress.pdf" class="pub-link"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> PDF</a></div>
+									<div class="pub-links"><a href="https://franklin-li.com/Camera_Ready_ASSETS25__VizXpress.pdf" class="pub-link" aria-label="PDF: VizXpress: Towards Expressive Visual Content by Blind Creators Through AI Support"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> PDF</a></div>
 								</div>
 							</div>
 
@@ -887,7 +896,7 @@
 									<div class="pub-venue">CHI 2024</div>
 									<div class="pub-title">A Contextual Inquiry of People with Vision Impairments in Cooking</div>
 									<div class="pub-authors"><strong>Franklin Mingzhe Li</strong>, Michael Xieyang Liu, Shaun K Kane, Patrick Carrington</div>
-									<div class="pub-links"><a href="https://franklin-li.com/Contextual%20Inquiry%20Cooking%201.pdf" class="pub-link"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> PDF</a></div>
+									<div class="pub-links"><a href="https://franklin-li.com/Contextual%20Inquiry%20Cooking%201.pdf" class="pub-link" aria-label="PDF: A Contextual Inquiry of People with Vision Impairments in Cooking"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> PDF</a></div>
 								</div>
 							</div>
 
@@ -897,7 +906,7 @@
 									<div class="pub-venue">CHI 2023</div>
 									<div class="pub-title">Breaking the "Inescapable" Cycle of Pain: Supporting Wheelchair Users' Upper Extremity Health Awareness and Management with Tracking Technologies</div>
 									<div class="pub-authors">Yunzhi Li, <strong>Franklin Mingzhe Li</strong>, Patrick Carrington</div>
-									<div class="pub-links"><a href="https://franklin-li.com/upper_extremity_health.pdf" class="pub-link"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> PDF</a></div>
+									<div class="pub-links"><a href="https://franklin-li.com/upper_extremity_health.pdf" class="pub-link" aria-label="PDF: Breaking the &quot;Inescapable&quot; Cycle of Pain: Supporting Wheelchair Users&#x27; Upper Extremity Health Awareness and Management with Tracking Technologies"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> PDF</a></div>
 								</div>
 							</div>
 
@@ -907,7 +916,7 @@
 									<div class="pub-venue">IMWUT 2019</div>
 									<div class="pub-title">FMT: A Wearable Camera-Based Object Tracking Memory Aid for Older Adults</div>
 									<div class="pub-authors"><strong>Franklin Mingzhe Li</strong>, Di Laura Chen, Mingming Fan, Khai N. Truong</div>
-									<div class="pub-links"><a href="https://franklin-li.com/FMT-IMWUT-19-CameraReady-FinalVersion-V2.pdf" class="pub-link"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> PDF</a></div>
+									<div class="pub-links"><a href="https://franklin-li.com/FMT-IMWUT-19-CameraReady-FinalVersion-V2.pdf" class="pub-link" aria-label="PDF: FMT: A Wearable Camera-Based Object Tracking Memory Aid for Older Adults"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> PDF</a></div>
 								</div>
 							</div>
 
@@ -918,7 +927,7 @@
 									<div class="pub-title">Eyelid Gestures on Mobile Devices for People with Motor Impairments</div>
 									<div class="pub-authors">Mingming Fan*, Zhen Li*, <strong>Franklin Mingzhe Li</strong>* (*Equal contribution)</div>
 									<div class="pub-links">
-										<a href="https://franklin-li.com/ASSETS2020_Eyelid.pdf" class="pub-link"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> PDF</a>
+										<a href="https://franklin-li.com/ASSETS2020_Eyelid.pdf" class="pub-link" aria-label="PDF: Eyelid Gestures on Mobile Devices for People with Motor Impairments"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> PDF</a>
 										<span class="pub-link"><i class="fa fa-trophy" aria-hidden="true"></i> Best Artifact Award</span>
 									</div>
 								</div>
@@ -926,11 +935,11 @@
 
 						</div>
 
-						<a class="more-link" href="https://franklin-li.com/#one">See the full publication list on the PI's homepage &rarr;</a>
+						<a class="more-link" href="https://franklin-li.com/#publications">See the full publication list on the PI's homepage &rarr;</a>
 					</section>
 
 				<!-- Research Funding -->
-					<section id="one">
+					<section id="research-funding">
 						<header class="major">
 							<h2>Research Funding</h2>
 						</header>
@@ -964,7 +973,7 @@
 					</section>
 
 				<!-- Media Coverage -->
-					<section id="one">
+					<section id="media-coverage">
 						<header class="major">
 							<h2>Media Coverage</h2>
 						</header>
@@ -998,13 +1007,13 @@
 					</section>
 
 				<!-- Join Us -->
-					<section id="one">
+					<section id="join-us">
 						<header class="major">
 							<h2>Join Us</h2>
 						</header>
 
 						<div class="recruit-callout">
-							<h2>ATLAS Lab is recruiting research assistants starting Fall 2026 and PhD students starting Fall 2027!</h2>
+							<p class="recruit-text">ATLAS Lab is recruiting research assistants starting Fall 2026 and PhD students starting Fall 2027!</p>
 						</div>
 
 						<ul class="join-list">
@@ -1017,7 +1026,7 @@
 					</section>
 
 				<!-- Contact -->
-					<section id="one">
+					<section id="contact">
 						<header class="major">
 							<h2>Contact</h2>
 						</header>
