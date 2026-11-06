@@ -31,10 +31,14 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+		<script type="text/javascript" id="unc-ub-script" data-color="navy" src="https://unc.edu/web-assets/utility-bar/utility-bar.min.js"></script>
 		<style>
 			:root {
-				--accent: #1d4ed8;
+				--accent: #13294B;
+				--link: #007FAE;
+				--content-width: 62rem;
+				--unc-utility-bar-width: var(--content-width);
 				--accent-glow: rgba(59, 130, 246, 0.15);
 				--accent-light: #3b82f6;
 				--text: #1e293b;
@@ -151,53 +155,6 @@
 			.news-what {
 				font-size: 0.95rem;
 				line-height: 1.5;
-			}
-
-			/* Header lab mark. Inline-block so it follows the header's
-			   text-align, which is right on desktop and centre on narrow
-			   screens -- same behaviour as the portrait on the PI site. */
-			.lab-mark {
-				display: inline-block;
-				width: 8.5em;
-				height: 8.5em;
-				margin: 0 0 1em 0;
-				padding: 0.8em;
-				box-sizing: border-box;
-				background: #ffffff;
-				border-radius: 100%;
-				box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-			}
-
-			.lab-mark img {
-				display: block;
-				width: 100%;
-				height: 100%;
-				object-fit: contain;
-			}
-
-			.lab-fullname {
-				font-size: 0.8rem;
-				line-height: 1.5;
-				letter-spacing: 0.02em;
-			}
-
-			/* Header navigation back to the personal site */
-			.lab-nav {
-				margin-top: 1.25rem;
-				font-size: 0.8rem;
-				letter-spacing: 0.05em;
-				text-transform: uppercase;
-			}
-
-			.lab-nav a {
-				color: #ffffff;
-				text-decoration: none;
-				border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-				padding-bottom: 2px;
-			}
-
-			.lab-nav a:hover {
-				border-bottom-color: #ffffff;
 			}
 
 			.icon-link {
@@ -461,14 +418,16 @@
 				color: var(--accent);
 				text-decoration: none;
 				padding: 0.25rem 0.6rem;
-				background: var(--accent-glow);
+				background: #ffffff;
+				border: 1px solid var(--border);
 				border-radius: 50px;
 				transition: all 0.2s ease;
 			}
 
-			.pub-link:hover {
+			#main .pub-link:hover {
 				background: var(--accent);
-				color: white;
+				border-color: var(--accent);
+				color: #ffffff;
 			}
 
 			.more-link {
@@ -554,41 +513,146 @@
 					align-items: flex-start;
 				}
 			}
-			/* Accessibility: visible keyboard focus, dark sidebar beyond the photo */
+			/* Accessibility: visible keyboard focus */
 			a:focus-visible, button:focus-visible {
 				outline: 3px solid #1d4ed8;
 				outline-offset: 2px;
 			}
 
-			#header a:focus-visible {
-				outline-color: #ffffff;
+			/* UNC identity: single-column layout under the utility bar */
+			#main {
+				margin: 0 auto;
+				max-width: var(--content-width);
+				width: 100%;
+				padding: 3rem 2rem 3rem 2rem;
 			}
 
-			#header {
-				background-color: #1e293b;
+			#main a {
+				color: var(--link);
+			}
+
+			.unc-site-header {
+				background: #ffffff;
+				border-bottom: 1px solid var(--border);
+			}
+
+			.unc-site-header .inner,
+			.unc-site-footer .inner {
+				max-width: var(--content-width);
+				margin: 0 auto;
+				padding: 1.5rem 2rem;
+			}
+
+			.site-title-wrap {
+				margin: 0;
+			}
+
+			.site-title {
+				display: inline-block;
+				font-family: 'Open Sans', sans-serif;
+				color: #13294B;
+				text-decoration: none;
+				border-bottom: 0;
+				line-height: 1.3;
+				margin: 0;
+			}
+
+			.site-title .unit {
+				display: block;
+				font-size: 2rem;
+				font-weight: 700;
+				line-height: 2.6rem;
+			}
+
+			.site-title .division {
+				display: block;
+				font-size: 1.5rem;
+				font-weight: 400;
+				line-height: 2.6rem;
+			}
+
+			.site-title:hover .unit,
+			.site-title:hover .division {
+				color: #007FAE;
+				text-decoration: underline;
+			}
+
+			.unc-site-footer {
+				background: #ffffff;
+				border-top: 1px solid var(--border);
+				font-size: 0.9rem;
+				line-height: 1.6;
+				color: var(--text);
+			}
+
+			.unc-site-footer .inner {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1.5rem 3rem;
+				align-items: flex-start;
+				padding-top: 2rem;
+				padding-bottom: 2.5rem;
+			}
+
+			.unc-signature-link {
+				flex: 0 0 auto;
+				width: 30%;
+				max-width: 260px;
+				min-width: 180px;
+			}
+
+			.unc-signature-link img {
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+
+			.unc-site-footer .footer-text {
+				flex: 1 1 20rem;
+			}
+
+			.unc-site-footer a {
+				color: var(--link);
+			}
+
+			.unc-site-footer ul {
+				list-style: none;
+				margin: 0.5rem 0 0 0;
+				padding: 0;
+			}
+
+			.unc-site-footer li {
+				display: inline;
+				padding: 0;
+				margin-right: 1rem;
+			}
+
+			@media screen and (max-width: 736px) {
+				.site-title .unit {
+					font-size: 1.5rem;
+					line-height: 1.95rem;
+				}
+
+				.site-title .division {
+					font-size: 1.125rem;
+					line-height: 1.95rem;
+				}
+
+				.unc-site-header .inner,
+				.unc-site-footer .inner,
+				#main {
+					padding-left: 1rem;
+					padding-right: 1rem;
+				}
 			}
 		</style>
 	</head>
 	<body>
 
 		<!-- Header -->
-			<header id="header">
+			<header class="unc-site-header">
 				<div class="inner">
-					<span class="lab-mark"><img src="images/atlas-lab-mark.png" alt="" /></span>
-					<h1><strong>ATLAS LAB</strong></h1>
-					<p class="lab-fullname">Accessible Technology and<br />
-					Life Augmented Systems Lab<br /><br />
-					School of Data and Information Sciences<br />
-					UNC-Chapel Hill<br />
-					ITS Manning, Room 4501<br />
-					Chapel Hill, NC 27599<br />
-					fmli[at]unc[dot]edu</p>
-					<p>
-					<a href="https://scholar.google.com/citations?user=jZa4SPIAAAAJ&hl=en" class="icon-link" title="Google Scholar" aria-label="Google Scholar" target="_blank" rel="noopener"><i class="fa fa-google" aria-hidden="true"></i><span class="sr-only">Google Scholar</span></a> &nbsp;
-					<a href="https://www.linkedin.com/in/franklin-mingzhe-li-4b3b8986/?skipRedirect=true" class="icon-link" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa fa-linkedin" aria-hidden="true"></i><span class="sr-only">LinkedIn</span></a> &nbsp;
-					<a href="https://x.com/Franklin_M_Li" class="icon-link" title="Twitter" aria-label="Twitter" target="_blank" rel="noopener"><i class="fa fa-twitter" aria-hidden="true"></i><span class="sr-only">Twitter</span></a>
-					</p>
-					<p class="lab-nav"><a href="https://franklin-li.com/">&larr; PI Homepage</a></p>
+					<h1 class="site-title-wrap"><a class="site-title" href="https://atlas.unc.edu/"><span class="unit">ATLAS Lab</span><span class="division">School of Data and Information Sciences</span></a></h1>
 				</div>
 			</header>
 
@@ -1044,6 +1108,26 @@
 					</section>
 
 			</div>
+
+		<!-- Footer -->
+			<footer class="unc-site-footer">
+				<div class="inner">
+					<a class="unc-signature-link" href="https://www.unc.edu/"><img src="https://www.unc.edu/web-assets/elements/images/university-signature-carolinablue-navy-h.svg" alt="The University of North Carolina at Chapel Hill" /></a>
+					<div class="footer-text">
+						<strong>ATLAS Lab</strong>, School of Data and Information Sciences<br />
+						ITS Manning, Room 4501, Chapel Hill, NC 27599<br />
+						fmli[at]unc[dot]edu
+						<ul>
+							<li><a href="https://franklin-li.com/">PI homepage</a></li>
+							<li><a href="https://scholar.google.com/citations?user=jZa4SPIAAAAJ&hl=en">Google Scholar</a></li>
+							<li><a href="https://www.linkedin.com/in/franklin-mingzhe-li-4b3b8986/?skipRedirect=true">LinkedIn</a></li>
+							<li><a href="https://x.com/Franklin_M_Li">X (Twitter)</a></li>
+							<li><a href="https://digitalaccessibility.unc.edu/report/">Report a digital accessibility issue</a></li>
+						</ul>
+						&copy; 2026 The University of North Carolina at Chapel Hill
+					</div>
+				</div>
+			</footer>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
