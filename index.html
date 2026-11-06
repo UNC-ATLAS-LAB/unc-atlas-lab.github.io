@@ -54,7 +54,7 @@
 			/* At-a-glance figures under the tagline */
 			.stat-strip {
 				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+				grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
 				gap: 1rem;
 				margin: 1.75rem 0 0.5rem 0;
 			}
@@ -190,7 +190,7 @@
 			/* Research theme cards */
 			.theme-grid {
 				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
 				gap: 1.25rem;
 				margin-top: 1.75rem;
 			}
@@ -251,7 +251,7 @@
 
 			.people-grid {
 				display: grid;
-				grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+				grid-template-columns: repeat(auto-fill, minmax(min(230px, 100%), 1fr));
 				gap: 1.25rem;
 			}
 
@@ -340,7 +340,7 @@
 			/* Publications */
 			.pub-grid {
 				display: grid;
-				grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+				grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
 				gap: 1.5rem;
 				margin-top: 1.75rem;
 			}
@@ -513,6 +513,13 @@
 					align-items: flex-start;
 				}
 			}
+			@media (prefers-reduced-motion: reduce) {
+				* {
+					transition: none !important;
+					animation: none !important;
+				}
+			}
+
 			/* Accessibility: visible keyboard focus */
 			a:focus-visible, button:focus-visible {
 				outline: 3px solid #1d4ed8;
@@ -667,7 +674,7 @@
 
 						<p class="lab-tagline">ATLAS Lab &mdash; the Accessible Technology and Life Augmented Systems Lab &mdash; builds interactive systems that make everyday physical activities accessible to people with disabilities and older adults, and that support health and well-being more broadly.</p>
 
-						<p>We are a Human-Computer Interaction (HCI) research group in the <a href="https://sdis.unc.edu/" target="_blank" rel="noopener">School of Data and Information Sciences</a> at the University of North Carolina at Chapel Hill, directed by <a href="https://franklin-li.com/">Prof. Franklin Mingzhe Li</a>. Our work sits at the intersection of HCI, accessibility, assistive technology, ubiquitous computing (UbiComp), AI, and health.</p>
+						<p>We are a Human-Computer Interaction (HCI) research group in the <a href="https://sdis.unc.edu/">School of Data and Information Sciences</a> at the University of North Carolina at Chapel Hill, directed by <a href="https://franklin-li.com/">Prof. Franklin Mingzhe Li</a>. Our work sits at the intersection of HCI, accessibility, assistive technology, ubiquitous computing (UbiComp), AI, and health.</p>
 
 						<div class="stat-strip">
 							<div class="stat">
@@ -773,7 +780,7 @@
 								<div>
 									<div class="person-name"><a href="https://franklin-li.com/">Franklin Mingzhe Li</a></div>
 									<div class="person-meta">
-										Tenure-Track Assistant Professor, <a href="https://sdis.unc.edu/person/franklin-mingzhe-li/" target="_blank" rel="noopener">School of Data and Information Sciences</a>, UNC-Chapel Hill<br />
+										Tenure-Track Assistant Professor, <a href="https://sdis.unc.edu/person/franklin-mingzhe-li/">School of Data and Information Sciences</a>, UNC-Chapel Hill<br />
 										PhD, Human-Computer Interaction Institute, Carnegie Mellon University<br />
 										Betensky-Kraut Endowed Fellow &middot; Stuart K. Card Fellow &middot; NSERC Postgraduate Fellow
 									</div>
@@ -795,7 +802,7 @@
 							<div class="person-card">
 								<img class="person-photo" src="images/people/yuting-peng.jpg" alt="Yuting Peng" />
 								<div>
-									<div class="person-name"><a href="https://yutingpeng.com/" target="_blank" rel="noopener">Yuting Peng</a></div>
+									<div class="person-name"><a href="https://yutingpeng.com/">Yuting Peng</a></div>
 									<div class="person-meta">Visiting Scholar, Communication &amp; HCI</div>
 									<div class="person-focus">Women&rsquo;s health, accessibility, human-AI interaction</div>
 								</div>
@@ -914,7 +921,7 @@
 									<div class="pub-venue">ASSETS 2025</div>
 									<div class="pub-title">VizXpress: Towards Expressive Visual Content by Blind Creators Through AI Support</div>
 									<div class="pub-authors">Lotus Zhang, Zhuohao Jerry Zhang, Gina Clepper, <strong>Franklin Mingzhe Li</strong>, Patrick Carrington, Jacob O Wobbrock, Leah Findlater</div>
-									<div class="pub-links"><a href="https://franklin-li.com/Camera_Ready_ASSETS25__VizXpress.pdf" class="pub-link" aria-label="PDF: VizXpress: Towards Expressive Visual Content by Blind Creators Through AI Support"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> PDF</a></div>
+									<div class="pub-links"><a href="https://doi.org/10.1145/3663547.3746345" class="pub-link" aria-label="ACM Digital Library: VizXpress: Towards Expressive Visual Content by Blind Creators Through AI Support"><i class="fa fa-book" aria-hidden="true"></i> ACM DL</a></div>
 								</div>
 							</div>
 
@@ -970,7 +977,7 @@
 									<div class="pub-venue">CHI 2023</div>
 									<div class="pub-title">Breaking the "Inescapable" Cycle of Pain: Supporting Wheelchair Users' Upper Extremity Health Awareness and Management with Tracking Technologies</div>
 									<div class="pub-authors">Yunzhi Li, <strong>Franklin Mingzhe Li</strong>, Patrick Carrington</div>
-									<div class="pub-links"><a href="https://franklin-li.com/upper_extremity_health.pdf" class="pub-link" aria-label="PDF: Breaking the &quot;Inescapable&quot; Cycle of Pain: Supporting Wheelchair Users&#x27; Upper Extremity Health Awareness and Management with Tracking Technologies"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> PDF</a></div>
+									<div class="pub-links"><a href="https://doi.org/10.1145/3544548.3580660" class="pub-link" aria-label="ACM Digital Library: Breaking the &quot;Inescapable&quot; Cycle of Pain: Supporting Wheelchair Users&#x27; Upper Extremity Health Awareness and Management with Tracking Technologies"><i class="fa fa-book" aria-hidden="true"></i> ACM DL</a></div>
 								</div>
 							</div>
 
@@ -980,7 +987,7 @@
 									<div class="pub-venue">IMWUT 2019</div>
 									<div class="pub-title">FMT: A Wearable Camera-Based Object Tracking Memory Aid for Older Adults</div>
 									<div class="pub-authors"><strong>Franklin Mingzhe Li</strong>, Di Laura Chen, Mingming Fan, Khai N. Truong</div>
-									<div class="pub-links"><a href="https://franklin-li.com/FMT-IMWUT-19-CameraReady-FinalVersion-V2.pdf" class="pub-link" aria-label="PDF: FMT: A Wearable Camera-Based Object Tracking Memory Aid for Older Adults"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> PDF</a></div>
+									<div class="pub-links"><a href="https://doi.org/10.1145/3351253" class="pub-link" aria-label="ACM Digital Library: FMT: A Wearable Camera-Based Object Tracking Memory Aid for Older Adults"><i class="fa fa-book" aria-hidden="true"></i> ACM DL</a></div>
 								</div>
 							</div>
 
@@ -991,7 +998,7 @@
 									<div class="pub-title">Eyelid Gestures on Mobile Devices for People with Motor Impairments</div>
 									<div class="pub-authors">Mingming Fan*, Zhen Li*, <strong>Franklin Mingzhe Li</strong>* (*Equal contribution)</div>
 									<div class="pub-links">
-										<a href="https://franklin-li.com/ASSETS2020_Eyelid.pdf" class="pub-link" aria-label="PDF: Eyelid Gestures on Mobile Devices for People with Motor Impairments"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> PDF</a>
+										<a href="https://doi.org/10.1145/3373625.3416987" class="pub-link" aria-label="ACM Digital Library: Eyelid Gestures on Mobile Devices for People with Motor Impairments"><i class="fa fa-book" aria-hidden="true"></i> ACM DL</a>
 										<span class="pub-link"><i class="fa fa-trophy" aria-hidden="true"></i> Best Artifact Award</span>
 									</div>
 								</div>
@@ -1044,27 +1051,27 @@
 
 						<ul class="fact-list">
 							<li>
-								<span class="fact-title"><a href="https://news.cornell.edu/stories/2025/03/ai-ring-tracks-spelled-words-american-sign-language" target="_blank" rel="noopener">AI ring tracks spelled words in American Sign Language</a></span>
+								<span class="fact-title"><a href="https://news.cornell.edu/stories/2025/03/ai-ring-tracks-spelled-words-american-sign-language">AI ring tracks spelled words in American Sign Language</a></span>
 								<span class="fact-meta">Cornell Ann S. Bowers College of Computing and Information Science &middot; Mar 2025</span>
 							</li>
 							<li>
-								<span class="fact-title"><a href="https://www.cs.cmu.edu/news/2024/nonvisual-cooking" target="_blank" rel="noopener">Accessing Recipe Information Without Looking</a></span>
+								<span class="fact-title"><a href="https://www.cs.cmu.edu/news/2024/nonvisual-cooking">Accessing Recipe Information Without Looking</a></span>
 								<span class="fact-meta">Carnegie Mellon School of Computer Science &middot; Dec 2024</span>
 							</li>
 							<li>
-								<span class="fact-title"><a href="https://www.hcii.cmu.edu/news/new-search-engine-tool-helps-users-make-sense-unfamiliar-topics" target="_blank" rel="noopener">New Search Engine Tool Helps Users Make Sense of Unfamiliar Topics</a></span>
+								<span class="fact-title"><a href="https://www.hcii.cmu.edu/news/new-search-engine-tool-helps-users-make-sense-unfamiliar-topics">New Search Engine Tool Helps Users Make Sense of Unfamiliar Topics</a></span>
 								<span class="fact-meta">Carnegie Mellon Human-Computer Interaction Institute &middot; Jun 2023</span>
 							</li>
 							<li>
-								<span class="fact-title"><a href="https://dl.acm.org/doi/abs/10.1145/3498367" target="_blank" rel="noopener">Eyelid gestures for people with motor impairments</a></span>
+								<span class="fact-title"><a href="https://dl.acm.org/doi/abs/10.1145/3498367">Eyelid gestures for people with motor impairments</a></span>
 								<span class="fact-meta">Communications of the ACM &middot; Jan 2022</span>
 							</li>
 							<li>
-								<span class="fact-title"><a href="https://spectrum.ieee.org/tech-talk/biomedical/bionics/the-next-frontier-for-gesture-control-is-teeth" target="_blank" rel="noopener">The Next Frontier for Gesture Control is Teeth</a></span>
+								<span class="fact-title"><a href="https://spectrum.ieee.org/tech-talk/biomedical/bionics/the-next-frontier-for-gesture-control-is-teeth">The Next Frontier for Gesture Control is Teeth</a></span>
 								<span class="fact-meta">IEEE Spectrum &middot; May 2021</span>
 							</li>
 							<li>
-								<span class="fact-title"><a href="https://www.newscientist.com/article/2218025-where-have-i-left-my-wallet-this-smart-camera-can-remind-you/" target="_blank" rel="noopener">Where have I left my wallet? This smart camera can remind you</a></span>
+								<span class="fact-title"><a href="https://www.newscientist.com/article/2218025-where-have-i-left-my-wallet-this-smart-camera-can-remind-you/">Where have I left my wallet? This smart camera can remind you</a></span>
 								<span class="fact-meta">New Scientist &middot; Sep 2019</span>
 							</li>
 						</ul>
@@ -1081,7 +1088,7 @@
 						</div>
 
 						<ul class="join-list">
-							<li><strong>Prospective PhD students:</strong> apply to the <a href="https://sdis.unc.edu/academics/doctoral/phd-data-science/" target="_blank" rel="noopener">PhD in Data Science</a> program in the School of Data and Information Sciences at UNC-Chapel Hill and mention Prof. Franklin Mingzhe Li in your application. Email a short note describing your research interests, along with your CV.</li>
+							<li><strong>Prospective PhD students:</strong> apply to the <a href="https://sdis.unc.edu/academics/doctoral/phd-data-science/">PhD in Data Science</a> program in the School of Data and Information Sciences at UNC-Chapel Hill and mention Prof. Franklin Mingzhe Li in your application. Email a short note describing your research interests, along with your CV.</li>
 							<li><strong>UNC undergraduate and master's students:</strong> we regularly take on research assistants. Email a note about what draws you to accessibility research, your CV, and your availability per week.</li>
 							<li><strong>Visiting scholars and interns:</strong> get in touch with a description of your background, the dates you have in mind, and your funding situation.</li>
 						</ul>
@@ -1103,7 +1110,7 @@
 							ITS Manning, Room 4501<br />
 							Chapel Hill, NC 27599<br /><br />
 							Email: fmli[at]unc[dot]edu<br />
-							UNC faculty profile: <a href="https://sdis.unc.edu/person/franklin-mingzhe-li/" target="_blank" rel="noopener">sdis.unc.edu/person/franklin-mingzhe-li</a>
+							UNC faculty profile: <a href="https://sdis.unc.edu/person/franklin-mingzhe-li/">sdis.unc.edu/person/franklin-mingzhe-li</a>
 						</div>
 					</section>
 
