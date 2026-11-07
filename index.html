@@ -526,6 +526,36 @@
 				outline-offset: 2px;
 			}
 
+			/* Lab logo sits in the page content, not the UNC site header */
+			.about-intro {
+				display: flex;
+				align-items: center;
+				gap: 2rem;
+			}
+
+			.about-intro .lab-tagline {
+				flex: 1 1 auto;
+			}
+
+			.about-mark {
+				flex: 0 0 auto;
+				width: 120px;
+				height: 120px;
+			}
+
+			@media screen and (max-width: 736px) {
+				.about-intro {
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 1rem;
+				}
+
+				.about-mark {
+					width: 88px;
+					height: 88px;
+				}
+			}
+
 			/* UNC identity: single-column layout under the utility bar */
 			#main {
 				margin: 0 auto;
@@ -672,7 +702,10 @@
 							<h2>About the Lab</h2>
 						</header>
 
-						<p class="lab-tagline">ATLAS Lab &mdash; the Accessible Technology and Life Augmented Systems Lab &mdash; builds interactive systems that make everyday physical activities accessible to people with disabilities and older adults, and that support health and well-being more broadly.</p>
+						<div class="about-intro">
+							<img class="about-mark" src="images/atlas-lab-mark.svg" alt="ATLAS Lab logo" />
+							<p class="lab-tagline">ATLAS Lab &mdash; the Accessible Technology and Life Augmented Systems Lab &mdash; builds interactive systems that make everyday physical activities accessible to people with disabilities and older adults, and that support health and well-being more broadly.</p>
+						</div>
 
 						<p>We are a Human-Computer Interaction (HCI) research group in the <a href="https://sdis.unc.edu/">School of Data and Information Sciences</a> at the University of North Carolina at Chapel Hill, directed by <a href="https://franklin-li.com/">Prof. Franklin Mingzhe Li</a>. Our work sits at the intersection of HCI, accessibility, assistive technology, ubiquitous computing (UbiComp), AI, and health.</p>
 
